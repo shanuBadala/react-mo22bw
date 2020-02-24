@@ -1,0 +1,104 @@
+body{
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3{
+  font-weight: 300;
+}
+a{
+  text-decoration: none;
+  color: $primary-blue;
+}
+  
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea{
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid lighten($primary-blue,25%);
+  border-radius: 4px;
+  min-height: 36px;
+  padding: 0 16px;
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  &:focus{
+    border-color: $primary-blue;
+    outline: none;
+  }
+}
+  
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+input[type=file]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+textarea{
+  padding: 8px;
+  height: 64px;
+}
+button{
+  font-size: inherit;
+  border: 1px solid transparent;
+  background: $white;
+  color: $gray-light;
+  border-radius: 4px;
+  height: 36px;
+  padding: 0 16px;
+  margin: 0;
+  font-family: inherit;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 300ms ease-in;
+  &:hover{
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  &:focus{
+    outline: none;
+  }
+  cursor: pointer;
+  &.button-primary{
+    background: $primary-blue;
+    color: $white;
+  }
+  &.disabled{
+    pointer-events: none;
+  }
+}
+
+ul{
+  list-style-type: none;
+  margin-bottom: 16px;
+  li{
+    margin-bottom: 4px;
+    padding: 8px 0;
+  }
+}
+
+// Utitlities
+.text-ar{
+  text-align: right;
+}
+.text-al{
+  text-align: left;
+}
+.text-ac{
+  text-align: center;
+}
